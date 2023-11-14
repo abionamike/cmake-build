@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/abionamike/Documents/cpp_initial/build",
+  "command": "/usr/local/bin/g++-13 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -o CMakeFiles/CPPI.dir/main.cpp.o -c /Users/abionamike/Documents/cpp_initial/main.cpp",
+  "file": "/Users/abionamike/Documents/cpp_initial/main.cpp",
+  "output": "CMakeFiles/CPPI.dir/main.cpp.o"
+}
+]
