@@ -400,17 +400,43 @@ int main() {
     // };
 
     // Capture by reference
-    int a = 34;
+    // int a = 34;
 
-    auto func = [&a]() {
-        cout << "Inner value: " << a << endl;
-    };
+    // auto func = [&a]() {
+    //     cout << "Inner value: " << a << endl;
+    // };
 
-    for (size_t i = 0; i < 5; i++) {
-        cout << "Outer value: " << a << endl;
-        func();
-        ++a;
-    };
+    // for (size_t i = 0; i < 5; i++) {
+    //     cout << "Outer value: " << a << endl;
+    //     func();
+    //     ++a;
+    // };
+
+    // Capture all by value
+    // int a = 34;
+
+    // auto func = [=]() { // the = sign in the capture list helps us to capture all by value
+    //     cout << "Inner value: " << a << endl;
+    // };
+
+    // for (size_t i = 0; i < 5; i++) {
+    //     cout << "Outer value: " << a << endl;
+    //     func();
+    //     ++a;
+    // };
+
+    // Capture all by value
+    // int a = 34;
+
+    // auto func = [&]() { // the & sign in the capture list helps us to capture all by reference
+    //     cout << "Inner value: " << a << endl;
+    // };
+
+    // for (size_t i = 0; i < 5; i++) {
+    //     cout << "Outer value: " << a << endl;
+    //     func();
+    //     ++a;
+    // };
     
     cout << "Program ending well" << endl; 
 
