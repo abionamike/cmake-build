@@ -6,9 +6,9 @@
 using namespace std;
 
 // void incr_age (int &age);
-void max_str (const string first, const string second, string &third);
-void max_int (const int first, const int second, int &third);
-void max_p_int (const int first, const int second, int *third);
+// void max_str (const string first, const string second, string &third);
+// void max_int (const int first, const int second, int &third);
+// void max_p_int (const int first, const int second, int *third);
 
 int main() {
     // int age1 = 20;
@@ -369,17 +369,28 @@ int main() {
     // cout << "Final output string "  << out_str << endl;
     // cout << "Final output int "  << out_int << endl;
 
-    auto res = []() {
-        cout << "Inside the lambda function" << endl;
-    };
+    // Lambda functions
+    // auto res = []() {
+    //     cout << "Inside the lambda function" << endl;
+    // };
+    // res();
 
-    auto reslt = [](double a, double b) ->double {
-        return a + b;
-    }(2.3, 3.4);
+    // [](double a, double b) {
+    //     cout << "a + b = " << a + b << endl;
+    // }(2.3, 4.1);
 
-    cout << "Lambda function : " << [](double a, double b) ->int {
-        return a + b;
-    }(2.8, 3.1) << endl;
+    // auto result = [](double a, double b) ->double {
+    //     return a + b;
+    // }(2.3, 4.5);
+
+    // cout << "a + b = " << result <<endl;
+
+    // Capture list in lambda functions: used to access variable outside the function
+    double a = 3.4;
+
+    [a]() {
+        cout << "a = " << a << endl;
+    }();
 
     cout << "Program ending well" << endl; 
 
@@ -389,29 +400,29 @@ int main() {
     return 0;
 }
 
-void max_str (const string first, const string second, string &third) {
-    if(first > second) {
-        third = first;
-    }  else {
-        third = second;
-    }
-}
+// void max_str (const string first, const string second, string &third) {
+//     if(first > second) {
+//         third = first;
+//     }  else {
+//         third = second;
+//     }
+// }
 
-void max_int (const int first, const int second, int &third) {
-    if(first > second) {
-        third = first;
-    }  else {
-        third = second;
-    }
-}
+// void max_int (const int first, const int second, int &third) {
+//     if(first > second) {
+//         third = first;
+//     }  else {
+//         third = second;
+//     }
+// }
 
-void max_p_int (const int first, const int second, int *third) {
-    if(first > second) {
-        *third = first;
-    }  else {
-        *third = second;
-    }
-}
+// void max_p_int (const int first, const int second, int *third) {
+//     if(first > second) {
+//         *third = first;
+//     }  else {
+//         *third = second;
+//     }
+// }
 
 // void incr_age (int &age) {
 //     ++age;
