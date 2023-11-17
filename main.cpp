@@ -5,7 +5,13 @@ using namespace std;
 
 template <typename Y> 
 
-Y maximum(Y a, Y b) {
+// Pass by value (copies are made and gives different addresses)
+// Y maximum(Y a, Y b) {
+//     return (a > b) ? a : b;
+// }
+
+// Pass by reference (no copies made, values will be store in the same address location)
+const Y& maximum(const Y& a, const Y& b) {
     return (a > b) ? a : b;
 }
 
