@@ -386,12 +386,32 @@ int main() {
     // cout << "a + b = " << result <<endl;
 
     // Capture list in lambda functions: used to access variable outside the function
-    double a = 3.4;
+    // Capture by value
+    // int a = 34;
 
-    [a]() {
-        cout << "a = " << a << endl;
-    }();
+    // auto func = [a]() {
+    //     cout << "Inner value: " << a << endl;
+    // };
 
+    // for (size_t i = 0; i < 5; i++) {
+    //     cout << "Outer value: " << a << endl;
+    //     func();
+    //     ++a;
+    // };
+
+    // Capture by reference
+    int a = 34;
+
+    auto func = [&a]() {
+        cout << "Inner value: " << a << endl;
+    };
+
+    for (size_t i = 0; i < 5; i++) {
+        cout << "Outer value: " << a << endl;
+        func();
+        ++a;
+    };
+    
     cout << "Program ending well" << endl; 
 
     // Pointers stores the address of a variable; the address is gotten by cout-ing the variable without the *
